@@ -3,5 +3,4 @@
    :caption: Table of Contents
    :title: Title
 
-   introduction 
    getting_started

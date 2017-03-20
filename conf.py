@@ -5,8 +5,8 @@ import sys, os
 sys.path.insert(0, os.path.abspath('extensions'))
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
-              'sphinx.ext.coverage', 'sphinx.ext.pngmath', 'sphinx.ext.ifconfig',
-              'epub2', 'mobi', 'autoimage', 'code_example']
+              'sphinx.ext.coverage', 'sphinx.ext.imgmath', 'sphinx.ext.ifconfig',
+              'autoimage', 'code_example']
 
 todo_include_todos = True
 templates_path = ['_templates']
@@ -18,7 +18,7 @@ add_function_parentheses = True
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-project = u'Music for Geeks and Nerds'
+project = u'TESTTEST'
 copyright = u'2012, Pedro Kroger'
 
 version = ''
@@ -28,7 +28,7 @@ release = ''
 
 html_theme = 'book'
 html_theme_path = ['themes']
-html_title = "Music for Geeks and Nerds"
+html_title = "TESTTEST"
 #html_short_title = None
 #html_logo = None
 #html_favicon = None

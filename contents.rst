@@ -5,5 +5,5 @@
    :maxdepth: 2
    :caption: Table of Contents
 
-   introduction
-   getting_started
+   introduction <introduction>
+   Getting Started <getting_started>

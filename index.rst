@@ -7,4 +7,3 @@ Hazard Services Focal Point User's Guide
    :includehidden:
 
    getting_started
-   define_sites

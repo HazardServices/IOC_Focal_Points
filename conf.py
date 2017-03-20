@@ -26,8 +26,8 @@ release = ''
 
 # -- Options for HTML output ---------------------------------------------------
 
-html_theme = 'book'
-html_theme_path = ['themes']
+#html_theme = 'book'
+#html_theme_path = ['themes']
 html_title = "TESTTEST"
 #html_short_title = None
 #html_logo = None

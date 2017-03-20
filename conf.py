@@ -7,38 +7,23 @@ sys.path.insert(0, os.path.abspath('extensions'))
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
               'sphinx.ext.coverage', 'sphinx.ext.imgmath', 'sphinx.ext.ifconfig',
              ]
-
-todo_include_todos = True
-templates_path = ['_templates']
+#type of files to parse
 source_suffix = '.rst'
-master_doc = 'index'
-exclude_patterns = []
-add_function_parentheses = True
-#add_module_names = True
-# A list of ignored prefixes for module index sorting.
-#modindex_common_prefix = []
 
+# name of file that contains the toc
+master_doc = 'index'
+
+#appears in the upper left
 project = u'Hazard Services IOC'
 copyright = u'2012, Pedro Kroger'
 
-version = ''
-release = ''
+version = '0.1'
 
 # -- Options for HTML output ---------------------------------------------------
 
-#html_theme = 'book'
-#html_theme_path = ['themes']
 html_title = "IOC Focal Point Guice"
-#html_short_title = None
-#html_logo = None
-#html_favicon = None
-html_static_path = ['_static']
-html_domain_indices = False
+html_short_title = "IOC FPG"
 html_use_index = True
-html_show_sphinx = False
-htmlhelp_basename = 'TEEEEEEEST'
-html_show_sourcelink = False
-
 
 ################################################################################
 

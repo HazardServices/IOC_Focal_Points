@@ -18,7 +18,7 @@ add_function_parentheses = True
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
-project = u'TESTTEST'
+project = u'Hazard Services IOC'
 copyright = u'2012, Pedro Kroger'
 
 version = ''
@@ -28,13 +28,13 @@ release = ''
 
 #html_theme = 'book'
 #html_theme_path = ['themes']
-html_title = "TESTTEST"
+html_title = "IOC Focal Point Guice"
 #html_short_title = None
 #html_logo = None
 #html_favicon = None
 html_static_path = ['_static']
 html_domain_indices = False
-html_use_index = False
+html_use_index = True
 html_show_sphinx = False
 htmlhelp_basename = 'TEEEEEEEST'
 html_show_sourcelink = False

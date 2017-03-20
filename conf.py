@@ -15,7 +15,7 @@ master_doc = 'index'
 
 #appears in the upper left
 project = u'Hazard Services IOC'
-copyright = u'2012, Pedro Kroger'
+copyright = u'NOAA Global Systems Division'
 
 version = '0.1'
 

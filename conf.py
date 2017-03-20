@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath('extensions'))
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
               'sphinx.ext.coverage', 'sphinx.ext.imgmath', 'sphinx.ext.ifconfig',
-              'autoimage', 'code_example']
+              'code_example']
 
 todo_include_todos = True
 templates_path = ['_templates']

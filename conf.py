@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath('extensions'))
 
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.todo',
               'sphinx.ext.coverage', 'sphinx.ext.imgmath', 'sphinx.ext.ifconfig',
-              'code_example']
+             ]
 
 todo_include_todos = True
 templates_path = ['_templates']
@@ -38,13 +38,6 @@ html_use_index = False
 html_show_sphinx = False
 htmlhelp_basename = 'TEEEEEEEST'
 html_show_sourcelink = False
-
-
-# -- Options for Code Examples output ---------------------------------------------------
-
-
-code_example_dir = "code-example"
-code_add_python_path = ["../py"]
 
 
 ################################################################################

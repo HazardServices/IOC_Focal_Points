@@ -58,9 +58,9 @@ Optional Steps
 
 * **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
 
-* **Python Language Tutorial:** Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
-   *  `Codeacademy <https://www.codecademy.com/>_`  Gives problems and checks them for you.
-   *  `Google tutorial <https://developers.google.com/edu/python/?hl=en>_`  Has videos which is also very helpful.
+* **Python Language Tutorial:**  Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+   *  `Codeacademy  <https://www.codecademy.com/>`_  Gives problems and checks them for you.
+   *  `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  Has videos which is also very helpful.
    * Official Python Website 
    * Learn Python
    * Tutorials Point

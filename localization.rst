@@ -23,9 +23,9 @@ There may be times when the more conventional non-incremental override behavior 
 The Localization Perspective under the Hazard Services tab (or in directories under ...utility/common_static/base/hazardServices/) contains the baseline and localization files for Hazard Services. You will find the following tabs in alphabetical order. They are listed here in logical groupings:
 
 * Configuration of Graphical User Interface
-  * Startup Config (incremental override)
-  * Alerts (xml override)
-  * Settings (incremental override)
+   * Startup Config (incremental override)
+   * Alerts (xml override)
+   * Settings (incremental override)
 * Hazard Types and metadata
    * Hazard Types (incremental override)
    * TODO: Hazard Type Color Table ??
@@ -52,14 +52,15 @@ Required Steps
 Optional Steps
 ---------------
 
-* Startup Configuration: Override non-required items in StartUpConfig.py which has various options that you may want to change.
-Settings: Create Site-Specific Settings. It may be useful for your site to have site-specific Settings to aid in the Forecast Process. For example, you may want a Setting that views only Warnings and Advisories, filtering out Watches. Or you may want a Setting to view only issued and ending hazards.
+* **Startup Configuration:** Override non-required items in StartUpConfig.py which has various options that you may want to change.
 
-* General Configuration: Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
+* **Settings:** Create Site-Specific Settings. It may be useful for your site to have site-specific Settings to aid in the Forecast Process. For example, you may want a Setting that views only Warnings and Advisories, filtering out Watches. Or you may want a Setting to view only issued and ending hazards.
 
-* Python Language Tutorials: Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
-   *  `Codeacademy <https://www.codecademy.com/>_`  -- gives problems and checks them for you
-   *  `Google tutorial <https://developers.google.com/edu/python/?hl=en>_`  -- has videos which is also very helpful
+* **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
+
+* **Python Language Tutorial:** Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+   *  `Codeacademy <https://www.codecademy.com/>_`  Gives problems and checks them for you.
+   *  `Google tutorial <https://developers.google.com/edu/python/?hl=en>_`  Has videos which is also very helpful.
    * Official Python Website 
    * Learn Python
    * Tutorials Point

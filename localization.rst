@@ -69,7 +69,7 @@ Optional Steps
 StartUp Configuration
 =====================
 
-The StartUpConfig.py file contains various items listed below. More detailed information can be found in the documentation within that file.
+The  StartUpConfig.py file contains various items listed below. More detailed information can be found in the documentation within that file.
 
 *  Dissemination order for products
 *  Recommender to use when creating hazards from gage points
@@ -87,11 +87,11 @@ Hazard Types
 The Hazard Types are stored in a localization file (HazardTypes.py) identifying all the hazards and basic information about each. (This is similar to the VTECTable in legacy operations.) It’s stored as a:
 
 *  Python Dictionary of dictionaries with
-*  Key: phen, sig, sub-type (optional). Examples:
+*  Key... phen, sig, sub-type (optional). Examples:
      * TO.W
      * FF.W.Convective
      * FF.W.NonConvective (e.g. Dam Failure)
-*  Fields: Please see the HazardTypes.py file for descriptions of the fields
+*  Fields... Please see the HazardTypes.py file for descriptions of the fields
      *  headline -- 'FLASH FLOOD WARNING'
 
 .. Note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.

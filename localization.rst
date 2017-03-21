@@ -41,13 +41,13 @@ The Localization Perspective under the Hazard Services tab (or in directories un
 
 Megawidgets
 -----------
-Hazard Services supports a set of user-defined graphical user interface components, called Megawidgets which are used throughout Hazard Services customization. Examples will be seen throughout this document and complete documentation can be found in the Megawidget section.
+Hazard Services supports a set of user-defined graphical user interface components, called Megawidgets which are used throughout Hazard Services customization. Examples will be seen throughout this document and complete documentation can be found in the `Megawidget Section  <http://hazardservices.readthedocs.io/en/latest/megawidgets.html>`_.
 
 Required Steps
 ------------
 
-* StartUpConfig.py: Override StartUpConfig.py required fields as designated in the baseline file. 
-* Site-specific geometries: Ingest shapefiles for Dam Inundation, Riverpoint Inundation, Burnscar areas. See detailed instructions in the next section.
+#. **StartUpConfig.py:** Override StartUpConfig.py required fields as designated in the baseline file. 
+#. **Site-specific geometries:** Ingest shapefiles for Dam Inundation, Riverpoint Inundation, Burnscar areas. See detailed instructions in the next section.
 
 Optional Steps
 ---------------
@@ -59,9 +59,9 @@ Optional Steps
 * **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
 
 * **Python Language Tutorial:**  Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
-   *  `Codeacademy  <https://www.codecademy.com/>`_  Gives problems and checks them for you.
-   *  `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  Has videos which is also very helpful.
-   * Official Python Website 
-   * Learn Python
-   * Tutorials Point
+   *  `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
+   *  `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
+   * `Official Python Website  <https://docs.python.org/2/tutorial/>`_ 
+   * `Learn Python  <http://www.learnpython.org/>`_ 
+   * `Tutorials Point <http://www.tutorialspoint.com/python/>`_
 

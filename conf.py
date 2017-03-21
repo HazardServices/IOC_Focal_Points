@@ -24,7 +24,7 @@ version = '0.1'
 html_title = "IOC Focal Point Guice"
 html_short_title = "IOC FPG"
 html_use_index = True
-html_theme = "guzzle"
+html_theme = "classic"
 
 ################################################################################
 

@@ -5,8 +5,10 @@ Hazard Services Focal Point User's Guide
    :maxdepth: 2
    :caption: Table of Contents
    :includehidden:
+   :numbered:
 
    getting_started
+   megawidgets
    
    .. note::
    

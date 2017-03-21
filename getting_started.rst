@@ -7,13 +7,10 @@ Getting Started
    :caption: Required Steps
    :numbered:
   
-   define_sites
-   define_backup
-   synchronize_inclusion_percentages
-   
-.. note::
-   This guide is for Focal Points who are already familiar with the material in the Hazard Services User’s Guide. It covers basic,   required configuration as well as advanced optional customizations.
-   
+    define_sites
+    define_backup
+    synchronize_inclusion_percentages
+    
 For a standard production installation of Cave including the Hazard Services software, the Hazard Services application really won’t 
 do much that is very useful. In order for Hazard Services to function correctly, there is a bare minimum amount of manual site 
 configuration needed.

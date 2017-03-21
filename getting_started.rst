@@ -7,6 +7,7 @@ Getting Started
    
 .. must be a space before actual sections   
    define_sites
+   define_backup
 
 .. note::
    This guide is for Focal Points who are already familiar with the material in the Hazard Services User’s Guide. It covers basic,   required configuration as well as advanced optional customizations.

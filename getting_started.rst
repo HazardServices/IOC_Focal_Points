@@ -23,7 +23,7 @@ Where file paths are mentioned that start with common_static/ or cave_static/, i
 the changes in the Localization perspective or by changing the files in the file system and then bouncing EDEX. Changing files in the 
 Localization perspective is always preferred, but every once in a while problems will manifest with how userRoles work, and there will 
 be no way around it other than to change a file in the file system and then restart EDEX.  On an lx, one can inspect the contents of 
-these same files under ~/caveData/common/ (for common_static/) or under ~/caveData/etc/ (for cave_static/), but under no circumstances 
-should one directly modify files under ~/caveData/common/ or ~/caveData/etc/. Where these instructions request adding or changing a file 
+these same files under ~/caveData/common/ (for common_static/) or under ~/caveData/etc/ (for cave_static/), **but under no circumstances 
+should one directly modify files under ~/caveData/common/ or ~/caveData/etc/.** Where these instructions request adding or changing a file 
 that for some reason your site has already added or changed, then the changes will need to be merged. Some of the changes mentioned here
 may need to be updated later in order to implement a robust rather than bare bones functionality.

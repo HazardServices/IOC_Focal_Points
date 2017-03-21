@@ -34,7 +34,7 @@ If there are overrides of inclusion percentages for warnGen, one needs to overri
     common_static/base/HazardServices/hazardTypes/HazardTypes.py
     common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
 
-This file is subject to incremental override, and so the site override file need only contain the new inclusion percentages for any impacted hazard types. Suppose for example that the only change needed was to adjust the inclusion percentage for Convective FFWs to 15 percent. Then the entire contents of the site override of HazardTypes.py would be::
+This file is subject to incremental override, and so the site override file need only contain the new inclusion percentages for any impacted hazard types. Suppose for example that the only change needed was to adjust the inclusion percentage for Convective FFWs to 15 percent. Then the entire contents of the site override of HazardTypes.py would be:
 
 .. code-block:: python
 

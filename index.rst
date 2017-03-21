@@ -14,5 +14,5 @@ Hazard Services Focal Point User's Guide
    
    .. note::
    
-   This is a work in progress. 'Hazard Services Documentation: Issues / Action Items <https://docs.google.com/document/d/1kRxV5_WaWmZncW5eftsxMYuu_5oX0ldS_Xr_6HQToQg/edit#>' for additional items to be covered in this guide
+   This is a work in progress. 'Hazard Services Documentation: Issues / Action Items <https://docs.google.com/document/d/1kRxV5_WaWmZncW5eftsxMYuu_5oX0ldS_Xr_6HQToQg/edit#>'_ for additional items to be covered in this guide
 

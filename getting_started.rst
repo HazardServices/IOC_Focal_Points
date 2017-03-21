@@ -1,5 +1,6 @@
+***************
 Getting Started
-===============
+***************
 
 .. note: there must be a space between the last toctree direction and the actual sections  
 

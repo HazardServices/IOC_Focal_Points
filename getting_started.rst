@@ -1,14 +1,16 @@
 Getting Started
 ===============
 
+.. note: there must be a space between the last toctree direction and the actual sections  
+
 .. toctree::
    :caption: Required Steps
    :numbered:
-   
-.. must be a space before actual sections   
+  
    define_sites
    define_backup
-
+   synchronize_inclusion_percentages
+   
 .. note::
    This guide is for Focal Points who are already familiar with the material in the Hazard Services User’s Guide. It covers basic,   required configuration as well as advanced optional customizations.
    

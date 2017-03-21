@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 .. toctree::
-   :caption: Subsections
+   :caption: Required Steps
    :numbered:
    
 .. must be a space before actual sections   

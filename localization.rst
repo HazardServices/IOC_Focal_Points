@@ -10,13 +10,13 @@ Overrides
 
 In Hazard Services, there are various kinds of Overrides to files:
 
-* Incremental Override: Some files consist of simple Python dictionaries or lists and are overridden by a process we call “incremental” override. Examples of these files are the Settings files (e.g. Hydrology_All.py) and HazardTypes.py. Although you will see examples of overriding files, a complete set of documentation for “incremental override” of Hazard Services configuration files can be found in the Incremental Override for Configuration Data document. 
+* **Incremental Override:** Some files consist of simple Python dictionaries or lists and are overridden by a process we call “incremental” override. Examples of these files are the Settings files (e.g. Hydrology_All.py) and HazardTypes.py. Although you will see examples of overriding files, a complete set of documentation for “incremental override” of Hazard Services configuration files can be found in the Incremental Override for Configuration Data document. 
 
-* Class-based Override: Other files contain Python classes and their overrides are “class-based”. A “skeleton” class is defined in the override file and the user adds selected Python methods from the class to “override” or add to the original methods. Overriding of these files is similar to the GFE and is covered in that training.
+* **Class-based Override:** Other files contain Python classes and their overrides are “class-based”. A “skeleton” class is defined in the override file and the user adds selected Python methods from the class to “override” or add to the original methods. Overriding of these files is similar to the GFE and is covered in that training.
 
-* XML Override: Some configuration files (e.g. Alerts) are “xml” format and are overridden as other “xml” files in AWIPS 2.
+* **XML Override:** Some configuration files (e.g. Alerts) are “xml” format and are overridden as other “xml” files in AWIPS 2.
 
-* Python Method Override: Some files consist of only Python methods e.g. Megawidget Side Effects. To override these files, you must copy the entire method into your override file.
+* **Python Method Override:** Some files consist of only Python methods e.g. Megawidget Side Effects. To override these files, you must copy the entire method into your override file.
 
 There may be times when the more conventional non-incremental override behavior is desired even though the file is subject to incremental override.  This is very simple to achieve with a single extra entry placed at the very beginning of the override file content; the form of this entry depends on whether the file is a dictionary or list at the top level.  For a dictionary this extra entry is **"_override_replace_" : True**,  ; for a list it is **"_override_replace_"**,  .  Then the content that follows can be a complete copy of the base, modified in whatever way is desired.
 
@@ -58,9 +58,9 @@ Optional Steps
 
 * **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
 
-* **Python Language Tutorial:**  Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
-   *  `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
-   *  `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
+* Python Language Tutorial:  Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+   * `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
+   * `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
    * `Official Python Website  <https://docs.python.org/2/tutorial/>`_ 
    * `Learn Python  <http://www.learnpython.org/>`_ 
    * `Tutorials Point <http://www.tutorialspoint.com/python/>`_
@@ -94,9 +94,10 @@ The Hazard Types are stored in a localization file (HazardTypes.py) identifying 
 *  Fields: Please see the HazardTypes.py file for descriptions of the fields
      *  headline -- 'FLASH FLOOD WARNING'
 
-.. Note: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
+.. Note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
 
-::
+Example::
+
   HazardTypes = {
     'HY.S' : {'phen': 'HY',
               'sig': 'S',

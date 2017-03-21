@@ -29,14 +29,14 @@ This impacts interoperability, which is the ability for hazards issued in warnGe
 
 If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are:
 
-.. code-block:: 
+.. code-block:: python
 
     common_static/base/HazardServices/hazardTypes/HazardTypes.py
     common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
 
 This file is subject to incremental override, and so the site override file need only contain the new inclusion percentages for any impacted hazard types. Suppose for example that the only change needed was to adjust the inclusion percentage for Convective FFWs to 15 percent. Then the entire contents of the site override of HazardTypes.py would be::
 
-.. code-block:: 
+.. code-block:: python
 
     HazardTypes = {
        'FF.W.Convective' : {'inclusionFraction': 15}

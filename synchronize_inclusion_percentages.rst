@@ -25,3 +25,15 @@ This impacts interoperability, which is the ability for hazards issued in warnGe
            end
            #
 
+If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are::
+             common_static/base/HazardServices/hazardTypes/HazardTypes.py
+             common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
+
+This file is subject to incremental override, and so the site override file need only contain the new inclusion percentages for any impacted hazard types. Suppose for example that the only change needed was to adjust the inclusion percentage for Convective FFWs to 15 percent. Then the entire contents of the site override of HazardTypes.py would be::
+
+           HazardTypes = {
+               'FF.W.Convective' : {'inclusionFraction': 15}
+           }
+           
+Changes in geospatialConfig_COUNTY.xml would potentially impact every hazard type where you have 'ugcType': 'county', and changes in geospatialConfig_ZONE.xml could potentially affect all those where you have 'ugcType': 'zone'. If the inclusion percentage is overridden in an individual product template, then one needs to identify the associated hazard in HazardTypes.py and provide the appropriate override value.
+          

@@ -1,3 +1,6 @@
+Define backup sites if needed
+=============================
+
 This step is only necessary if there is a desire to interoperate with service backup. Of course, any site using Hazard Services to fulfill operational responsibilities will no doubt need to take this step. To do this, create a file at the path common_static/site/LLL/HazardServices/settings/backupSites.xml with the following contents::
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

@@ -1,9 +1,6 @@
 *******************
 Customization
 *******************
-   
-Overview
-=========
 
 Hazard Services is delivered with a set of baseline hazard generation functionality. However, it is clear that “one size” does not fit all national sites spanning diverse meteorological regimes and topographies. Therefore, Hazard Services is highly configurable and this section will help Focal Points to customize the system to address their local requirements.
 

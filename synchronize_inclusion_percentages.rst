@@ -1,7 +1,9 @@
 Synchronize Hazard inclusion percentages.
 =====================================================================================
 
-This impacts interoperability, which is the ability for hazards issued in warnGen to also be handled in Hazard Services and vice versa. If all the inclusion percentages for warnGen are the base defaults, then there is no need to take this step. Run the simple shell script that follows on a px or dx; if it produces no output, then in all likelihood you have no overrides for include percentages that impact IOC products for Hazard Services::
+This impacts interoperability, which is the ability for hazards issued in warnGen to also be handled in Hazard Services and vice versa. If all the inclusion percentages for warnGen are the base defaults, then there is no need to take this step. Run the simple shell script that follows on a px or dx; if it produces no output, then in all likelihood you have no overrides for include percentages that impact IOC products for Hazard Services:
+
+.. code-block:: bash
 
            #!/bin/csh -f
            set LLL = `cat /awips2/edex/bin/setup.env | grep AW_SITE_IDENTIFIER | \
@@ -25,16 +27,20 @@ This impacts interoperability, which is the ability for hazards issued in warnGe
            end
            #
 
-If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are::
+If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are:
 
-             common_static/base/HazardServices/hazardTypes/HazardTypes.py
-             common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
+.. code-block:: 
+
+    common_static/base/HazardServices/hazardTypes/HazardTypes.py
+    common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
 
 This file is subject to incremental override, and so the site override file need only contain the new inclusion percentages for any impacted hazard types. Suppose for example that the only change needed was to adjust the inclusion percentage for Convective FFWs to 15 percent. Then the entire contents of the site override of HazardTypes.py would be::
 
-           HazardTypes = {
-               'FF.W.Convective' : {'inclusionFraction': 15}
-           }
+.. code-block:: 
+
+    HazardTypes = {
+       'FF.W.Convective' : {'inclusionFraction': 15}
+    }
            
 Changes in geospatialConfig_COUNTY.xml would potentially impact every hazard type where you have 'ugcType': 'county', and changes in geospatialConfig_ZONE.xml could potentially affect all those where you have 'ugcType': 'zone'. If the inclusion percentage is overridden in an individual product template, then one needs to identify the associated hazard in HazardTypes.py and provide the appropriate override value.
           

@@ -94,8 +94,9 @@ The Hazard Types are stored in a localization file (HazardTypes.py) identifying 
 *  Fields: Please see the HazardTypes.py file for descriptions of the fields
      *  headline -- 'FLASH FLOOD WARNING'
 
-.. Note: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, the SITE level file could simply contain::
+.. Note: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
 
+::
   HazardTypes = {
     'HY.S' : {'phen': 'HY',
               'sig': 'S',

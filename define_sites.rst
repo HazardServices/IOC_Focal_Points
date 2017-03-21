@@ -6,7 +6,7 @@ REQUIRED: Define "possibleSites" and "visibleSites"
  
 **Action:** Modify *common_static/site/LLL/HazardServices/startUpConfig/StartUpConfig.py* to contain the following:
 
-Example::
+.. codeblock:: python
 
    StartUpConfig = {
      "possibleSites": ["LLL"],

@@ -1,8 +1,9 @@
 Getting Started
 ===============
-
+#must be a space before actual sections
 .. toctree::
    :caption: Subsections
+   :numbered:
    
    define_sites
 

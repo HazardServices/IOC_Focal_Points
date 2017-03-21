@@ -26,6 +26,7 @@ This impacts interoperability, which is the ability for hazards issued in warnGe
            #
 
 If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are::
+
              common_static/base/HazardServices/hazardTypes/HazardTypes.py
              common_static/site/LLL/HazardServices/hazardTypes/HazardTypes.py
 

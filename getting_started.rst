@@ -1,10 +1,11 @@
 Getting Started
 ===============
-#must be a space before actual sections
+
 .. toctree::
    :caption: Subsections
    :numbered:
    
+.. must be a space before actual sections   
    define_sites
 
 .. note::

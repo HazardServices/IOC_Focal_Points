@@ -2,6 +2,11 @@
 Customization
 *******************
 
+.. toctree::
+   :caption: Required Steps
+
+   localization
+   
 Overview
 =========
 

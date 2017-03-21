@@ -5,11 +5,11 @@ Getting Started
 
 .. toctree::
    :caption: Required Steps
-   :numbered:
   
    define_sites
    define_backup
    synchronize_inclusion_percentages
+   
     
 For a standard production installation of Cave including the Hazard Services software, the Hazard Services application really won’t 
 do much that is very useful. In order for Hazard Services to function correctly, there is a bare minimum amount of manual site 

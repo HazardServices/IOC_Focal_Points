@@ -46,3 +46,19 @@ Required Steps
 
 * StartUpConfig.py: Override StartUpConfig.py required fields as designated in the baseline file. 
 * Site-specific geometries: Ingest shapefiles for Dam Inundation, Riverpoint Inundation, Burnscar areas. See detailed instructions in the next section.
+
+Optional Steps
+---------------
+
+* Startup Configuration: Override non-required items in StartUpConfig.py which has various options that you may want to change.
+Settings: Create Site-Specific Settings. It may be useful for your site to have site-specific Settings to aid in the Forecast Process. For example, you may want a Setting that views only Warnings and Advisories, filtering out Watches. Or you may want a Setting to view only issued and ending hazards.
+
+* General Configuration: Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
+
+* Python Language Tutorials: Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+  * `Codeacademy <https://www.codecademy.com/>_` -- gives problems and checks them for you
+  * Google tutorial -- has videos which is also very helpful
+  * Official Python Website 
+  * Learn Python
+  * Tutorials Point
+

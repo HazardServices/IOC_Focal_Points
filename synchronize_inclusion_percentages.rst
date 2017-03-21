@@ -1,5 +1,5 @@
-Synchronize Hazard inclusion percentages.
-=====================================================================================
+Synchronize hazard inclusion percentages
+========================================
 
 This impacts interoperability, which is the ability for hazards issued in warnGen to also be handled in Hazard Services and vice versa. If all the inclusion percentages for warnGen are the base defaults, then there is no need to take this step. Run the simple shell script that follows on a px or dx; if it produces no output, then in all likelihood you have no overrides for include percentages that impact IOC products for Hazard Services:
 

@@ -57,7 +57,8 @@ Optional Steps
 * **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
 
 .. note::
-    Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+
+   Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
    
       * `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
       * `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
@@ -84,17 +85,16 @@ The baseline VTEC hazard types, categories, and metadata are set up in the files
 Hazard Types
 ============
 
-The Hazard Types are stored in a localization file (HazardTypes.py) identifying all the hazards and basic information about each. (This is similar to the VTECTable in legacy operations.) It’s stored as a:
+The Hazard Types are stored in a localization file (HazardTypes.py) identifying all the hazards and basic information about each. (This is similar to the VTECTable in legacy operations.) It’s stored as a Python dictionary of dictionaries:
 
-*  Python Dictionary of dictionaries with
-*  Key: phen, sig, sub-type (optional). Examples: 
-     * TO.W
-     * FF.W.Convective
-     * FF.W.NonConvective (e.g. Dam Failure)
- *  Fields: Please see the *HazardTypes.py* file for descriptions of the fileds
-     * headline -- 'FLASH FLOOD WARNING'
+.. code-block:: python
 
-.. Note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
+dict = {phen:{TO.W},sig{FF.W.Convective},sub-type{FF.W.NonConvective}}
+
+where the sub-type is optional. An exampe NonConvective Field is a dam Failure. Please see the *HarzardTypes.py* fields for descriptions of the fields
+ * headline -- 'FLASH FLOOD WARNING'
+ 
+.. note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
 
 .. code-block:: python
 

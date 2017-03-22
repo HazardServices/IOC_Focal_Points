@@ -135,9 +135,10 @@ Hazard Metadata
 The Hazard Metadata is user-configurable per Hazard Type and appears in the Hazard Information Dialog. The configuration for the metadata consists of these types of files:
 
     *  HazardMetaData.py : One Python file which designates the metadata file name for each hazard type (or set of hazard types that share common metadata definitions). The code block below contains the default content of *HazardMetaData.py* so you can see the format
-     *  Metadata Python files which contain the fields, choices, and display format for all the metadata to appear in the Hazard Information Dialog and subsequently in the products. For example, the MetaData_FF_W_Convective.py file is shown in Appendix 3.
+    *  Metadata Python files which contain the fields, choices, and display format for all the metadata to appear in the Hazard Information Dialog and subsequently in the products. For example, the MetaData_FF_W_Convective.py file is shown in Appendix 3.
 
 .. code-block:: python
+
           # HazardMetaData.py
           HazardMetaData =[
                   {"hazardTypes": [("FF", "W", "Convective")], 

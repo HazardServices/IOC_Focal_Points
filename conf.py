@@ -14,14 +14,14 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 #appears in the upper left
-project = u'Hazard Services IOC'
+project = u'HS IOC Focal Points'
 copyright = u'NOAA Global Systems Division'
 
 version = '0.1'
 
 # -- Options for HTML output ---------------------------------------------------
 
-html_title = "IOC Focal Point Guice"
+html_title = "IOC Focal Point Guide"
 html_short_title = "IOC FPG"
 html_use_index = True
 # html_theme = "bizstyle"

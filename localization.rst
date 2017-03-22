@@ -90,11 +90,10 @@ The Hazard Types are stored in a localization file (HazardTypes.py) identifying 
 .. code-block:: python
 
    dict = {phen:{TO.W:field}, sig{FF.W.Convective:field}, sub-type{FF.W.NonConvective:field}}
-   
-.. note:: 
-
-   Sub-type is optional. An example NonConvective Field is a dam failure. Please see the HazardTypes.py file for descriptions of the fields
-       * headline -- 'FLASH FLOOD WARNING'
+   # sub-type is optional
+   # An example NonConvective Field is a dam failure
+   # Please see the *HazardTypes.py* file for descriptions of the fields
+   # Example headline: 'FLASH FLOOD WARNING'
  
 .. note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
 

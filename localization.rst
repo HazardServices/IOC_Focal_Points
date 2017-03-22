@@ -83,7 +83,7 @@ Hazard Configuration
 The baseline VTEC hazard types, categories, and metadata are set up in the files discussed in this section. All of these files can be overridden to adjust modifiable attributes of existing hazards or to add new hazard types.
 
 Hazard Types
-============
+------------
 
 The Hazard Types are stored in a localization file (HazardTypes.py) identifying all the hazards and basic information about each. (This is similar to the VTECTable in legacy operations.) It’s stored as a Python dictionary of dictionaries:
 
@@ -108,4 +108,86 @@ The Hazard Types are stored in a localization file (HazardTypes.py) identifying 
   
 Also, since Hazard Services will eventually implement a National Hazard Database, there is the possibility that with user-defined hazard types there could be duplicate hazard types with different meanings which could lead to confusion for Forecasters viewing hazard information from other sites. This problem needs to be addressed, perhaps as a National registry for hazard types.  
   
+Hazard Categories
+-----------------
+
+Hazard Types are designated user-configurable Hazard Categories which are defined in another localization file containing a dictionaries of Python List with entries.  The dictionary is a mapping from a category name to a list of hazard types (and possibly subtypes).
+
+The Hazard Categories make it easier to select the desired Hazard Type in the Settings dialog and the Hazard Information Dialog. Incremental override could be used on this file as well, to add to or modify the BASE configuration. For example, to move convective watches into a new category called, literally, “Convective Watches”,  the SITE override file might contain either of the following:
+
+.. code-block:: python
+
+  HazardCategories = 
+          {
+          "Convective": ["_override_remove_list_", ("SV","A"), ("TO","A")],
+          "Convective Watches": [ ("SV","A"), ("TO","A") ]
+          }
+  HazardCategories = 
+          {
+          "Convective": ["_override_replace_", ("EW","W"), ("SV","W"), ("TO","W")],
+          "Convective Watches": [ ("SV","A"), ("TO","A") ]
+          }
+        
+The file HazardCategories.py is subject to is subject to incremental override.  This means that when a list in an override is in the same namespace as a list in the base, the default behavior is to combine the override list with base list.  So to remove items from an existing list in the base, one needs to either specifically remove those items (first example) or first stipulate that the base list should be ignored before presenting the override list (second example).
+       
+Hazard Metadata
+---------------
+The Hazard Metadata is user-configurable per Hazard Type and appears in the Hazard Information Dialog. The configuration for the metadata consists of these types of files:
+
+    *  HazardMetaData.py : One Python file which designates the metadata file name for each hazard type (or set of hazard types that share common metadata definitions). The code block below contains the default content of *HazardMetaData.py* so you can see the format
+     *  Metadata Python files which contain the fields, choices, and display format for all the metadata to appear in the Hazard Information Dialog and subsequently in the products. For example, the MetaData_FF_W_Convective.py file is shown in Appendix 3.
+
+.. code-block:: python
+          # HazardMetaData.py
+          HazardMetaData =[
+                  {"hazardTypes": [("FF", "W", "Convective")], 
+                    "classMetaData": "MetaData_FF_W_Convective"},
+                  {"hazardTypes": [("FF", "W", "NonConvective")],
+                   "classMetaData": "MetaData_FF_W_NonConvective"},
+                  {"hazardTypes": [("FF", "W", "BurnScar")],
+                   "classMetaData": "MetaData_FF_W_BurnScar"},
+                  {"hazardTypes": [("FA", "Y")], "classMetaData": "MetaData_FA_Y"},
+                  {"hazardTypes": [("FA", "W")], "classMetaData": "MetaData_FA_W"},
+                  {"hazardTypes": [("FF", "A")], "classMetaData": "MetaData_FF_A"},
+                  {"hazardTypes": [("FA", "A")], "classMetaData": "MetaData_FA_A"},
+                  {"hazardTypes": [("FL", "A")], "classMetaData": "MetaData_FL_A",},
+                  {"hazardTypes": [("FL", "W")], "classMetaData": "MetaData_FL_W"},
+                  {"hazardTypes": [("FL", "Y")], "classMetaData": "MetaData_FL_Y"},
+                  {"hazardTypes": [("HY", "O")], "classMetaData": "MetaData_HY_O"},
+                  {"hazardTypes": [("HY", "S")], "classMetaData": "MetaData_HY_S"},
+            ]
+    
+Hazard Metadata is specified as megawidgets so that they can be displayed easily in the Hazard Information Dialog. For information on megawidgets see Chapter 2.
+
+Overriding metadata files. Using the class-based approach, the override files need only contain the methods that need to be changed or added. As a simple example, suppose one wanted to have a more descriptive GUI label for one Call to Action for the FF.W.Convective hazard.  The override file would need only contain:
+
+.. code-block:: python
+
+    # MetaData_FF_W_Convective.py:
+    class MetaData(CommonMetaData.MetaData):
+    
+        def ctaStayAway(self):
+            return {"identifier": "stayAwayCTA",
+                "displayString": "Stay away or be swept away",
+                "productString":
+                '''Stay away or be swept away. River banks and culverts can become
+                unstable and unsafe.'''}
+
+The green is what was added to the default instance of this method. Note that the default instance of this method is actually in *CommonMetaData.py*. By implementing this in MetaData_FF_W_Convective.py, this change only impacts that hazard subype.  Were this an override to *CommonMetaData.py*, then every hazard type/subtype that made use of this CTA would see this change.
+
+Hazard Type Color Table
+-----------------------
+This functionality will eventually interoperate with the GFE Hazard Grid color table.
+
+Hazard Expiration Alerts      
+-----------------------
+
+Focal points can configure when and how alerts based on hazard expiration manifest themselves. The base configuration is shown here. Please refer to that document in the discussion below. At a later time, there may be a GUI available to assist in this process. For now, other versions of this configuration can be created via the Localization Perspective.
+
+Alerts are configured based on categories. In the base configuration, each hazard type belongs to its own category. However, site, etc. configurations can combined hazard types into other named categories. Hazard types are expressed by sub-field phenomenon (e.g. FA), significance (e.g. W) and, optionally, subtype (e.g. Convective).
+
+For each category, a collection of named alert criteria are defined. The manifestations currently supported are in the console or as pop-up alerts. The units of the expirationTime can be hours, minutes or percent_completed. Percent_completed indicates how far along the hazard has progressed between the time it is issued and the expiration time of the earliest product generated by the hazard. So if a hazard is issued at 7:00am and the earliest product expiration time is 11:00am and the configuration is 25% then the alert will go off at 8:00am.
+
+For Console (count-down-timer) alerts, the desired color is specified in terms of red/green/blue fractions between 0 and 1. So, for example, yellow would be specified as r=1.0, g=1.0, b=0.0. Various pages on the world-wide-web can help you define what those numbers should be to create the desired color. The color transparency (a=1.0) is ignored but should be left untouched. Optionally, whether or not the timer text is bold, blink and italic can also be specified via true/false. By default they are all false. 
+
 

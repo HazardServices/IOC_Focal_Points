@@ -55,12 +55,15 @@ Optional Steps
 * **Startup Configuration:** Override non-required items in StartUpConfig.py which has various options that you may want to change.
 * **Settings:** Create Site-Specific Settings. It may be useful for your site to have site-specific Settings to aid in the Forecast Process. For example, you may want a Setting that views only Warnings and Advisories, filtering out Watches. Or you may want a Setting to view only issued and ending hazards.
 * **General Configuration:** Baseline versions of the Recommenders, Product Generators, Hazard MetaData (appearing in the Hazard Information Dialog), Hazard Types and Categories will work for your site “out-of-the-box.” However, as you work with the system, you will want to appropriately localize. This document will give you the information you need to do so.
-* **Python Language Tutorial:**  Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
-   * `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
-   * `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
-   * `Official Python Website  <https://docs.python.org/2/tutorial/>`_ 
-   * `Learn Python  <http://www.learnpython.org/>`_ 
-   * `Tutorials Point <http://www.tutorialspoint.com/python/>`_
+
+.. note::
+    Configuration of Hazard Services involves Python configuration files. If you are not already familiar with Python and Class-based programming there are various tutorials that will give you the background needed:
+   
+      * `Codeacademy  <https://www.codecademy.com/>`_  --Gives problems and checks them for you.
+      * `Google tutorial  <https://developers.google.com/edu/python/?hl=en>`_  --Has videos which is also very helpful.
+      * `Official Python Website  <https://docs.python.org/2/tutorial/>`_ 
+      * `Learn Python  <http://www.learnpython.org/>`_ 
+      * `Tutorials Point <http://www.tutorialspoint.com/python/>`_
 
 
 StartUp Configuration
@@ -84,16 +87,16 @@ Hazard Types
 The Hazard Types are stored in a localization file (HazardTypes.py) identifying all the hazards and basic information about each. (This is similar to the VTECTable in legacy operations.) It’s stored as a:
 
 *  Python Dictionary of dictionaries with
-*  Key: phen, sig, sub-type (optional). Examples:
+*  Key: phen, sig, sub-type (optional). Examples: 
      * TO.W
      * FF.W.Convective
      * FF.W.NonConvective (e.g. Dam Failure)
- *  Fields: Please see the HazardTypes.py file for descriptions of the fields
+ *  Fields: Please see the *HazardTypes.py* file for descriptions of the fileds
      * headline -- 'FLASH FLOOD WARNING'
 
 .. Note:: The hazard Types file contains almost 100 hazard types and is quite large. Using incremental override to add a new hazard type, is easy. Just modify the SITE level file like the example below.
 
-.. codeblock:: python
+.. code-block:: python
 
   HazardTypes = {
     'HY.S' : {'phen': 'HY',

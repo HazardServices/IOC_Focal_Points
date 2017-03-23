@@ -14,6 +14,7 @@ Hazard Services Focal Point User's Guide
    :maxdepth: 4
    :caption: Table of Contents
    :numbered:
+   :includehidden:
 
    getting_started
    customization

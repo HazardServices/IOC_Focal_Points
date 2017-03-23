@@ -26,7 +26,8 @@ This impacts interoperability, which is the ability for hazards issued in warnGe
                grep inclusionPercent $cmnRoot/site/$LLL/warngen/$one
            end
            #
-
+           
+:download:`the above example <https://raw.githubusercontent.com/HazardServices/IOC_Focal_Points/master/downloads/test_download>`_          
 If there are overrides of inclusion percentages for warnGen, one needs to override the inclusion percentages for Hazard Services to match them. This is done by producing an override file for HazardTypes.py. The paths, respectively, to the base and site override version of this file are:
 
 .. code-block:: python

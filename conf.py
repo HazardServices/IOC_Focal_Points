@@ -14,7 +14,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 #appears in the upper left
-project = u'HS IOC Focal Points'
+project = u'Home/Contents'
 copyright = u'NOAA Global Systems Division'
 
 version = '0.1'

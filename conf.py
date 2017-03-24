@@ -20,13 +20,13 @@ copyright = u'NOAA Global Systems Division'
 version = '0.1'
 
 # -- Options for HTML output ---------------------------------------------------
-
+html_theme = 'sphinx_rtd_theme'
+html_style = None
+html_theme_options = {'collapse_navigation': True}
+using_rtd_theme = True
 html_title = "IOC Focal Point Guide"
 html_short_title = "IOC FPG"
 html_use_index = True
-html_theme_options = {
-    "collapse_navigation" : False
-}
 # html_theme = "bizstyle"
 
 ################################################################################

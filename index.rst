@@ -15,7 +15,6 @@ Hazard Services Focal Point User's Guide
    :caption: Table of Contents
    :numbered:
    :includehidden:
-   :collapse: False
 
    getting_started
    customization

@@ -22,11 +22,12 @@ version = '0.1'
 # -- Options for HTML output ---------------------------------------------------
 html_theme = 'sphinx_rtd_theme'
 html_style = None
-html_theme_options = {'collapse_navigation': True}
+html_theme_options = {'collapse_navigation': False}
 using_rtd_theme = True
 html_title = "IOC Focal Point Guide"
 html_short_title = "IOC FPG"
 html_use_index = True
+display_version = False
 # html_theme = "bizstyle"
 
 ################################################################################
